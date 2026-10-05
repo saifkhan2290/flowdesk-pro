@@ -1,0 +1,248 @@
+.fdp-form-wrapper {
+    width: 100%;
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e7eaf0;
+    border-radius: 18px;
+    box-sizing: border-box;
+    box-shadow: 0 12px 35px rgba(16, 24, 40, 0.06);
+}
+
+.fdp-form-header {
+    margin-bottom: 28px;
+}
+
+.fdp-form-eyebrow {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: #667085;
+}
+
+.fdp-form-header h2 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #101828;
+}
+
+.fdp-form-header p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #667085;
+}
+
+.fdp-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.fdp-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.fdp-form-full {
+    grid-column: 1 / -1;
+}
+
+.fdp-form-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #344054;
+}
+
+.fdp-form-field input {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 13px;
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #101828;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fdp-form-field input::placeholder {
+    color: #98a2b3;
+}
+
+.fdp-form-field input:focus {
+    border-color: #84adff;
+    box-shadow: 0 0 0 3px rgba(132, 173, 255, 0.18);
+}
+
+.fdp-submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    margin-top: 24px;
+    padding: 10px 22px;
+    background: #101828;
+    border: 0;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.fdp-submit-button:hover {
+    background: #344054;
+    transform: translateY(-1px);
+}
+
+.fdp-form-message {
+    display: none;
+    margin-top: 20px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+
+    .fdp-form-wrapper {
+        margin: 20px auto;
+        padding: 24px 18px;
+    }
+
+    .fdp-form-header h2 {
+        font-size: 24px;
+    }
+
+    .fdp-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fdp-form-full {
+        grid-column: auto;
+    }
+
+    .fdp-submit-button {
+        width: 100%;
+    }
+}
+.fdp-form-success {
+    display: block;
+    background: #ecfdf3;
+    border: 1px solid #abefc6;
+    color: #067647;
+}
+
+.fdp-form-error {
+    display: block;
+    background: #fef3f2;
+    border: 1px solid #fecdca;
+    color: #b42318;
+}
+
+.fdp-submit-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+    transform: none;
+}
+/* =========================
+   Activity Log
+   ========================= */
+
+.fdp-activity-list {
+    position: relative;
+    padding: 5px 0;
+}
+
+.fdp-activity-item {
+    display: flex;
+    gap: 14px;
+    position: relative;
+    padding: 0 0 22px;
+}
+
+.fdp-activity-item:last-child {
+    padding-bottom: 0;
+}
+
+.fdp-activity-marker {
+    width: 10px;
+    height: 10px;
+    flex: 0 0 10px;
+    margin-top: 5px;
+    background: #2e90fa;
+    border: 3px solid #eff8ff;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+
+.fdp-activity-content {
+    flex: 1;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.fdp-activity-item:last-child .fdp-activity-content {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.fdp-activity-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.fdp-activity-top strong {
+    font-size: 13px;
+    color: #101828;
+}
+
+.fdp-activity-top span {
+    font-size: 11px;
+    color: #98a2b3;
+}
+
+.fdp-activity-content p {
+    margin: 7px 0;
+    font-size: 13px;
+    color: #475467;
+}
+
+.fdp-activity-content small {
+    font-size: 11px;
+    color: #667085;
+}
+
+.fdp-activity-empty {
+    padding: 20px;
+    text-align: center;
+    background: #f9fafb;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #667085;
+}
+/* FlowDesk anti-spam honeypot */
+.fdp-hp-field {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}

@@ -1,0 +1,1333 @@
+/* =========================================================
+   FLOWDESK PRO — COMPLETE ADMIN STYLES
+   ========================================================= */
+
+
+/* =========================================================
+   01. GLOBAL
+   ========================================================= */
+
+.fdp-admin {
+    --fdp-bg: #f5f7fa;
+    --fdp-card: #ffffff;
+    --fdp-border: #e4e7ec;
+    --fdp-border-soft: #eaecf0;
+    --fdp-text: #101828;
+    --fdp-text-secondary: #344054;
+    --fdp-muted: #667085;
+    --fdp-light: #98a2b3;
+    --fdp-primary: #155eef;
+    --fdp-success: #039855;
+
+    max-width: 1600px;
+    margin: 20px 20px 0 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--fdp-text);
+}
+
+body.toplevel_page_flowdesk-pro #wpcontent,
+body.flowdesk-pro_page_flowdesk-pipeline #wpcontent,
+body.flowdesk-pro_page_flowdesk-settings #wpcontent {
+    background: var(--fdp-bg);
+}
+
+
+/* =========================================================
+   02. HEADER
+   ========================================================= */
+
+.fdp-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 30px 32px;
+    background: #ffffff;
+    border: 1px solid var(--fdp-border);
+    border-radius: 18px;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+.fdp-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--fdp-primary);
+}
+
+.fdp-eyebrow {
+    margin: 0 0 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: var(--fdp-primary);
+}
+
+.fdp-header h1 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+    color: var(--fdp-text);
+}
+
+.fdp-subtitle {
+    max-width: 650px;
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--fdp-muted);
+}
+
+.fdp-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    padding: 9px 13px;
+    background: #ecfdf3;
+    border: 1px solid #abefc6;
+    border-radius: 999px;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
+    font-size: 13px;
+    font-weight: 600;
+    color: #027a48;
+}
+
+.fdp-status span {
+    width: 8px;
+    height: 8px;
+    background: #12b76a;
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   03. DASHBOARD STAT CARDS
+   ========================================================= */
+
+.fdp-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.fdp-stat-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 105px;
+    overflow: hidden;
+    padding: 22px;
+    background: var(--fdp-card);
+    border: 1px solid var(--fdp-border);
+    border-radius: 14px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.fdp-stat-card:hover {
+    transform: translateY(-2px);
+    border-color: #d0d5dd;
+    box-shadow: 0 8px 22px rgba(16, 24, 40, 0.07);
+}
+
+.fdp-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    background: #f2f4f7;
+    border: 1px solid var(--fdp-border-soft);
+    border-radius: 11px;
+    font-size: 19px;
+}
+
+.fdp-stat-card p {
+    margin: 0 0 5px;
+    font-size: 13px;
+    color: var(--fdp-muted);
+}
+
+.fdp-stat-card h2 {
+    margin: 0;
+    font-size: 27px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: var(--fdp-text);
+}
+
+
+/* =========================================================
+   04. DASHBOARD PANELS
+   ========================================================= */
+
+.fdp-dashboard-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+    gap: 18px;
+}
+
+.fdp-panel {
+    padding: 24px;
+    background: var(--fdp-card);
+    border: 1px solid var(--fdp-border);
+    border-radius: 14px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+.fdp-panel-header {
+    margin: -2px 0 4px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eef1f4;
+}
+
+.fdp-panel-header h2 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--fdp-text);
+}
+
+.fdp-panel-header p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: var(--fdp-muted);
+}
+
+
+/* Empty State */
+
+.fdp-empty-state {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.fdp-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 14px;
+    background: #f2f4f7;
+    border-radius: 14px;
+    font-size: 22px;
+}
+
+.fdp-empty-state h3 {
+    margin: 0 0 7px;
+    font-size: 16px;
+    color: var(--fdp-text);
+}
+
+.fdp-empty-state p {
+    max-width: 380px;
+    margin: auto;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--fdp-muted);
+}
+
+
+/* =========================================================
+   05. DASHBOARD RECENT LEADS
+   ========================================================= */
+
+.fdp-lead-list {
+    margin-top: 4px;
+}
+
+.fdp-lead-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 10px;
+    border-bottom: 1px solid #eef1f4;
+    border-radius: 8px;
+    color: var(--fdp-text);
+    text-decoration: none;
+    transition:
+        background 0.18s ease,
+        transform 0.18s ease;
+}
+
+.fdp-lead-row:last-child {
+    border-bottom: 0;
+}
+
+.fdp-lead-row:hover {
+    background: #f8fafc;
+    color: var(--fdp-text);
+    transform: translateX(2px);
+}
+
+.fdp-lead-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    background: #eef4ff;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(53, 56, 205, 0.08);
+    color: #3538cd;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.fdp-lead-info {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.fdp-lead-info strong {
+    overflow: hidden;
+    font-size: 14px;
+    color: var(--fdp-text);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fdp-lead-info span {
+    font-size: 12px;
+    color: var(--fdp-muted);
+}
+
+.fdp-lead-status {
+    flex-shrink: 0;
+    padding: 5px 9px;
+    background: #eff8ff;
+    border-radius: 20px;
+    color: #175cd3;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   06. DASHBOARD PIPELINE OVERVIEW
+   ========================================================= */
+
+.fdp-pipeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 4px;
+    border-bottom: 1px solid #eef1f4;
+}
+
+.fdp-pipeline-item:last-child {
+    border-bottom: 0;
+}
+
+.fdp-pipeline-item > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--fdp-text-secondary);
+}
+
+.fdp-pipeline-item strong {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    min-height: 28px;
+    padding: 0 8px;
+    background: #f2f4f7;
+    border-radius: 999px;
+    font-size: 13px;
+    color: var(--fdp-text);
+}
+
+.fdp-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.fdp-new {
+    background: #2e90fa;
+}
+
+.fdp-contacted {
+    background: #f79009;
+}
+
+.fdp-qualified {
+    background: #7f56d9;
+}
+
+.fdp-won {
+    background: #12b76a;
+}
+
+
+/* =========================================================
+   07. STATUS BADGES
+   ========================================================= */
+
+.fdp-admin-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.fdp-status-new {
+    background: #eff8ff;
+    border-color: #b2ddff;
+    color: #175cd3;
+}
+
+.fdp-status-contacted {
+    background: #fffaeb;
+    border-color: #fedf89;
+    color: #b54708;
+}
+
+.fdp-status-qualified {
+    background: #f4f3ff;
+    border-color: #d9d6fe;
+    color: #5925dc;
+}
+
+.fdp-status-won {
+    background: #ecfdf3;
+    border-color: #abefc6;
+    color: #027a48;
+}
+
+.fdp-status-lost {
+    background: #fef3f2;
+    border-color: #fecdca;
+    color: #b42318;
+}
+
+
+/* =========================================================
+   08. INTERNAL NOTES
+   ========================================================= */
+
+.fdp-notes-box {
+    padding: 4px 0;
+}
+
+.fdp-add-note label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--fdp-text);
+}
+
+.fdp-add-note textarea {
+    width: 100%;
+    min-height: 110px;
+    padding: 12px 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.fdp-add-note textarea:focus {
+    border-color: #84adff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(132, 173, 255, 0.16);
+}
+
+.fdp-notes-history {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--fdp-border-soft);
+}
+
+.fdp-notes-history h3 {
+    margin: 0 0 14px;
+    font-size: 14px;
+    color: var(--fdp-text);
+}
+
+.fdp-note-item {
+    margin-bottom: 12px;
+    padding: 14px 16px;
+    background: #f9fafb;
+    border: 1px solid var(--fdp-border-soft);
+    border-radius: 10px;
+    transition:
+        border-color 0.18s ease,
+        background 0.18s ease;
+}
+
+.fdp-note-item:hover {
+    background: #ffffff;
+    border-color: #d0d5dd;
+}
+
+.fdp-note-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.fdp-note-meta strong {
+    font-size: 13px;
+    color: var(--fdp-text);
+}
+
+.fdp-note-meta span {
+    font-size: 12px;
+    color: var(--fdp-muted);
+}
+
+.fdp-note-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--fdp-text-secondary);
+}
+
+.fdp-no-notes {
+    margin-top: 20px;
+    padding: 16px;
+    background: #f9fafb;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--fdp-muted);
+}
+
+
+/* =========================================================
+   09. KANBAN PIPELINE
+   ========================================================= */
+
+.fdp-kanban-board {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(260px, 1fr));
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.fdp-kanban-column {
+    min-width: 260px;
+    padding: 14px;
+    background: #f8fafc;
+    border: 1px solid var(--fdp-border);
+    border-radius: 14px;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.02);
+}
+
+.fdp-kanban-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding: 4px 2px;
+}
+
+.fdp-kanban-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fdp-kanban-title h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--fdp-text);
+}
+
+.fdp-kanban-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.fdp-kanban-new {
+    background: #2e90fa;
+}
+
+.fdp-kanban-contacted {
+    background: #f79009;
+}
+
+.fdp-kanban-qualified {
+    background: #7f56d9;
+}
+
+.fdp-kanban-won {
+    background: #12b76a;
+}
+
+.fdp-kanban-lost {
+    background: #f04438;
+}
+
+.fdp-kanban-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 25px;
+    height: 25px;
+    padding: 0 7px;
+    background: #ffffff;
+    border: 1px solid var(--fdp-border-soft);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #475467;
+}
+
+.fdp-kanban-cards {
+    display: flex;
+    min-height: 120px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 3px;
+    border-radius: 10px;
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fdp-kanban-cards.fdp-drag-over {
+    background: #eef4ff;
+    box-shadow: inset 0 0 0 2px #84adff;
+}
+
+.fdp-kanban-card {
+    display: block;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid var(--fdp-border-soft);
+    border-radius: 11px;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
+    color: var(--fdp-text);
+    text-decoration: none;
+    cursor: grab;
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        border-color 0.18s ease;
+}
+
+.fdp-kanban-card:hover {
+    border-color: #b2ccff;
+    box-shadow: 0 8px 20px rgba(16, 24, 40, 0.07);
+    color: var(--fdp-text);
+    transform: translateY(-2px);
+}
+
+.fdp-kanban-card:active {
+    cursor: grabbing;
+}
+
+.fdp-kanban-card.fdp-is-dragging {
+    border-color: #84adff;
+}
+
+.fdp-kanban-card-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.fdp-kanban-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    background: #eef4ff;
+    border-radius: 50%;
+    color: #3538cd;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.fdp-kanban-card-name {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.fdp-kanban-card-name strong {
+    overflow: hidden;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fdp-kanban-card-name span {
+    overflow: hidden;
+    font-size: 12px;
+    color: var(--fdp-muted);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fdp-kanban-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #f2f4f7;
+}
+
+.fdp-kanban-detail span {
+    font-size: 11px;
+    color: var(--fdp-muted);
+}
+
+.fdp-kanban-detail strong {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--fdp-text-secondary);
+}
+
+.fdp-kanban-card-actions {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #f2f4f7;
+}
+
+.fdp-kanban-edit {
+    font-size: 11px;
+    font-weight: 600;
+    color: #175cd3;
+    text-decoration: none;
+}
+
+.fdp-kanban-edit:hover {
+    color: #1849a9;
+    text-decoration: underline;
+}
+
+.fdp-kanban-empty {
+    padding: 30px 10px;
+    background: #ffffff;
+    border: 1px dashed #d0d5dd;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--fdp-light);
+}
+
+
+/* =========================================================
+   10. SETTINGS PAGE
+   ========================================================= */
+
+.fdp-settings-panel {
+    max-width: 900px;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid var(--fdp-border);
+    border-radius: 14px;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+.fdp-setting-section {
+    margin-bottom: 30px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--fdp-border-soft);
+}
+
+.fdp-setting-section:last-of-type {
+    border-bottom: 0;
+}
+
+.fdp-setting-section h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    color: var(--fdp-text);
+}
+
+.fdp-setting-section > p {
+    margin: 0 0 22px;
+    font-size: 13px;
+    color: var(--fdp-muted);
+}
+
+.fdp-setting-field {
+    margin-bottom: 20px;
+}
+
+.fdp-setting-field > label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--fdp-text-secondary);
+}
+
+.fdp-setting-field input[type="email"],
+.fdp-setting-field input[type="text"],
+.fdp-setting-field select,
+.fdp-setting-field textarea {
+    width: 100%;
+    max-width: 520px;
+    min-height: 42px;
+    padding: 9px 11px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    box-sizing: border-box;
+    box-shadow: none;
+}
+
+.fdp-setting-field textarea {
+    resize: vertical;
+}
+
+.fdp-setting-field input:focus,
+.fdp-setting-field select:focus,
+.fdp-setting-field textarea:focus {
+    border-color: #84adff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(132, 173, 255, 0.16);
+}
+
+.fdp-checkbox-label {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    margin: 0 !important;
+}
+
+.fdp-admin .button,
+.fdp-admin .button-primary,
+.fdp-settings-panel .button-primary {
+    min-height: 38px;
+    padding: 6px 14px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   11. ACTIVITY LOG
+   ========================================================= */
+
+.fdp-activity-list {
+    position: relative;
+    padding: 5px 0;
+}
+
+.fdp-activity-item {
+    position: relative;
+    display: flex;
+    gap: 14px;
+    padding: 0 0 22px;
+}
+
+.fdp-activity-item:last-child {
+    padding-bottom: 0;
+}
+
+.fdp-activity-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 7px;
+    width: 1px;
+    height: calc(100% - 4px);
+    background: var(--fdp-border);
+}
+
+.fdp-activity-marker {
+    position: relative;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    flex: 0 0 10px;
+    margin-top: 5px;
+    background: #2e90fa;
+    border: 3px solid #eff8ff;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+
+.fdp-activity-content {
+    flex: 1;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--fdp-border-soft);
+}
+
+.fdp-activity-item:last-child .fdp-activity-content {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.fdp-activity-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.fdp-activity-top strong {
+    font-size: 13px;
+    color: var(--fdp-text);
+}
+
+.fdp-activity-top span {
+    font-size: 11px;
+    color: var(--fdp-light);
+}
+
+.fdp-activity-content p {
+    margin: 7px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #475467;
+}
+
+.fdp-activity-content small {
+    font-size: 11px;
+    color: var(--fdp-muted);
+}
+
+.fdp-activity-empty {
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--fdp-muted);
+}
+
+
+/* =========================================================
+   12. ALL LEADS SCREEN
+   ========================================================= */
+
+body.post-type-fdp_lead .wrap {
+    margin-top: 22px;
+}
+
+body.post-type-fdp_lead .wrap > h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--fdp-text, #101828);
+}
+
+body.post-type-fdp_lead .page-title-action {
+    min-height: 36px;
+    padding: 7px 14px;
+    background: #155eef;
+    border: 1px solid #155eef;
+    border-radius: 7px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+body.post-type-fdp_lead .page-title-action:hover,
+body.post-type-fdp_lead .page-title-action:focus {
+    background: #004eeb;
+    border-color: #004eeb;
+    color: #ffffff;
+}
+
+
+/* Filters */
+
+body.post-type-fdp_lead .tablenav {
+    margin: 16px 0;
+}
+
+body.post-type-fdp_lead .tablenav select,
+body.post-type-fdp_lead .search-box input[type="search"] {
+    min-height: 36px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    box-shadow: none;
+}
+
+body.post-type-fdp_lead .tablenav .button,
+body.post-type-fdp_lead .search-box .button {
+    min-height: 36px;
+    padding: 5px 13px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+
+/* Leads table */
+
+body.post-type-fdp_lead .wp-list-table {
+    width: 100%;
+    min-width: 1180px;
+    table-layout: auto;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+body.post-type-fdp_lead .wp-list-table thead th,
+body.post-type-fdp_lead .wp-list-table thead td,
+body.post-type-fdp_lead .wp-list-table tfoot th,
+body.post-type-fdp_lead .wp-list-table tfoot td {
+    background: #f8fafc;
+    border-bottom-color: #e4e7ec;
+}
+
+body.post-type-fdp_lead .wp-list-table tbody tr {
+    height: auto;
+    transition: background 0.18s ease;
+}
+
+body.post-type-fdp_lead .wp-list-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+body.post-type-fdp_lead .wp-list-table th,
+body.post-type-fdp_lead .wp-list-table td {
+    height: auto;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    vertical-align: middle;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+
+/* Checkbox */
+
+body.post-type-fdp_lead .wp-list-table .check-column {
+    width: 36px;
+    min-width: 36px;
+}
+
+
+/* IMPORTANT — Lead Name fix */
+
+body.post-type-fdp_lead .wp-list-table .column-title {
+    width: 18%;
+    min-width: 180px;
+}
+
+body.post-type-fdp_lead .wp-list-table th.column-title {
+    white-space: nowrap;
+}
+
+body.post-type-fdp_lead .wp-list-table td.column-title {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+body.post-type-fdp_lead .column-title strong {
+    display: block;
+    min-width: 0;
+}
+
+body.post-type-fdp_lead .column-title strong a,
+body.post-type-fdp_lead .column-title .row-title {
+    display: inline-block;
+    max-width: 260px;
+    overflow: hidden;
+    font-weight: 700;
+    color: #101828;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+body.post-type-fdp_lead .column-title strong a:hover,
+body.post-type-fdp_lead .column-title .row-title:hover {
+    color: #155eef;
+}
+
+
+/* Proper column widths */
+
+body.post-type-fdp_lead .wp-list-table .column-fdp_email {
+    width: 16%;
+    min-width: 170px;
+}
+
+body.post-type-fdp_lead .wp-list-table .column-fdp_company {
+    width: 14%;
+    min-width: 150px;
+}
+
+body.post-type-fdp_lead .wp-list-table .column-fdp_budget {
+    width: 9%;
+    min-width: 90px;
+    white-space: nowrap;
+}
+
+body.post-type-fdp_lead .wp-list-table .column-fdp_source {
+    width: 9%;
+    min-width: 100px;
+    white-space: nowrap;
+}
+
+body.post-type-fdp_lead .wp-list-table .column-fdp_status {
+    width: 10%;
+    min-width: 115px;
+    white-space: nowrap;
+}
+
+body.post-type-fdp_lead .wp-list-table .column-fdp_followup {
+    width: 11%;
+    min-width: 125px;
+    white-space: nowrap;
+}
+
+body.post-type-fdp_lead .wp-list-table .column-date {
+    width: 13%;
+    min-width: 155px;
+}
+
+
+/* Prevent random letter-by-letter wrapping */
+
+body.post-type-fdp_lead .wp-list-table th a,
+body.post-type-fdp_lead .wp-list-table th span,
+body.post-type-fdp_lead .wp-list-table td {
+    word-break: normal;
+}
+
+body.post-type-fdp_lead .wp-list-table .row-actions {
+    white-space: normal;
+}
+
+
+/* =========================================================
+   13. EDIT LEAD SCREEN
+   ========================================================= */
+
+body.post-type-fdp_lead.post-php #poststuff,
+body.post-type-fdp_lead.post-new-php #poststuff {
+    padding-top: 12px;
+}
+
+body.post-type-fdp_lead #titlewrap input {
+    min-height: 52px;
+    padding: 10px 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 9px;
+    box-shadow: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+body.post-type-fdp_lead #titlewrap input:focus {
+    border-color: #84adff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(132, 173, 255, 0.16);
+}
+
+
+/* FlowDesk Meta Boxes */
+
+body.post-type-fdp_lead #fdp_lead_details,
+body.post-type-fdp_lead #fdp_lead_notes,
+body.post-type-fdp_lead #fdp_activity_log {
+    overflow: hidden;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+body.post-type-fdp_lead #fdp_lead_details .postbox-header,
+body.post-type-fdp_lead #fdp_lead_notes .postbox-header,
+body.post-type-fdp_lead #fdp_activity_log .postbox-header {
+    min-height: 50px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e4e7ec;
+}
+
+body.post-type-fdp_lead #fdp_lead_details .hndle,
+body.post-type-fdp_lead #fdp_lead_notes .hndle,
+body.post-type-fdp_lead #fdp_activity_log .hndle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #101828;
+}
+
+body.post-type-fdp_lead #fdp_lead_details .inside,
+body.post-type-fdp_lead #fdp_lead_notes .inside,
+body.post-type-fdp_lead #fdp_activity_log .inside {
+    margin: 0;
+    padding: 20px;
+}
+
+
+/* Lead Details Fields */
+
+body.post-type-fdp_lead #fdp_lead_details .form-table {
+    margin-top: 0;
+}
+
+body.post-type-fdp_lead #fdp_lead_details .form-table th {
+    width: 160px;
+    padding: 16px 15px 16px 0;
+    color: #344054;
+}
+
+body.post-type-fdp_lead #fdp_lead_details .form-table td {
+    padding: 12px 10px;
+}
+
+body.post-type-fdp_lead #fdp_lead_details input[type="text"],
+body.post-type-fdp_lead #fdp_lead_details input[type="email"],
+body.post-type-fdp_lead #fdp_lead_details input[type="date"],
+body.post-type-fdp_lead #fdp_lead_details select {
+    width: 100%;
+    max-width: 520px;
+    min-height: 42px;
+    padding: 7px 11px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    box-shadow: none;
+}
+
+body.post-type-fdp_lead #fdp_lead_details input:focus,
+body.post-type-fdp_lead #fdp_lead_details select:focus {
+    border-color: #84adff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(132, 173, 255, 0.16);
+}
+
+
+/* Publish Box */
+
+body.post-type-fdp_lead #submitdiv {
+    overflow: hidden;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+body.post-type-fdp_lead #submitdiv .postbox-header {
+    background: #f8fafc;
+}
+
+body.post-type-fdp_lead #publish {
+    min-height: 38px;
+    padding: 4px 18px;
+    background: #155eef;
+    border-color: #155eef;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+body.post-type-fdp_lead #publish:hover {
+    background: #004eeb;
+    border-color: #004eeb;
+}
+
+
+/* =========================================================
+   14. RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1400px) {
+    .fdp-kanban-board {
+        grid-template-columns: repeat(5, 280px);
+    }
+}
+
+@media (max-width: 1100px) {
+    .fdp-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .fdp-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 782px) {
+    .fdp-admin {
+        margin-right: 10px;
+    }
+
+    .fdp-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 24px 20px;
+    }
+
+    .fdp-header h1 {
+        font-size: 27px;
+    }
+
+    .fdp-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .fdp-stat-card {
+        min-height: 95px;
+    }
+
+    .fdp-panel {
+        padding: 18px;
+    }
+
+    .fdp-lead-row {
+        align-items: flex-start;
+    }
+
+    .fdp-note-meta,
+    .fdp-activity-top {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    body.post-type-fdp_lead #fdp_lead_details .form-table th,
+    body.post-type-fdp_lead #fdp_lead_details .form-table td {
+        display: block;
+        width: 100%;
+        padding: 7px 0;
+    }
+
+    body.post-type-fdp_lead #fdp_lead_details .form-table th {
+        padding-top: 15px;
+    }
+
+    body.post-type-fdp_lead #fdp_lead_details input,
+    body.post-type-fdp_lead #fdp_lead_details select {
+        max-width: none;
+    }
+}
